@@ -8,8 +8,8 @@
         2.4 Button CSS
         2.5 Image/Text Slider CSS
 3. Home Section CSS
-4. Services Section CSS
-5. About Section CSS
+4. Sobre Section CSS
+5. Personagens Section CSS
 6. Clients Section CSS
 7. News Section CSS
 8. Portfolio Section CSS
@@ -67,6 +67,7 @@ body a:hover {
 body p, 
 body pre {
     margin-bottom: 13px;
+    text-align:justify;
 }
 
 .site-wrapper img {
@@ -811,61 +812,146 @@ h1.big-text {
 
 
 /* ===================================
-    4. Services Section CSS
+    4. Sobre Section CSS
 ====================================== */
 
-#services {
+#sobre {
     background-image: url(images/on_black_left.png);
-    background-color: #000000;
+    background-image: linear-gradient(to bottom, #392666,#572C83, #392666);
+    
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: auto;
 }
 
-.service-holder {
+.sobre-holder {
     margin: 25px 0;
 }
 
-.service-holder:after {
+.sobre-holder:after {
     content: "";
     display: block;
     clear: both;    
 }
 
-.service-txt h4 {
+
+.sobre-txt h4 {
     font-size: 46px;
     color: #fff;
     font-weight: 700;
     line-height: 110%;
+
 }
 
-.service-num {
-    font-size: 264px;
-    font-weight: 700;
-    color: #000000;
-    text-shadow: -1px 0 #b3b3b3, 
-        0 1px #b3b3b3, 
-        1px 0 #b3b3b3, 
-        0 -1px #b3b3b3;
-    line-height: 100%;
-    height: 165px;
-    overflow: hidden;
-    margin-bottom: -10px;
-    -webkit-transform: translateZ(0);
-}
+
 
 
 /* ===================================
-    5. About Section CSS
+    5. Personagens Section CSS
 ====================================== */
 
-#about {
-    background-image: url(images/on_white_right.png);
-    background-color: #ffffff;
+#personagens {
+    box-sizing:border-box;
+    background-image: url(images/img/orange.svg);
     background-position: right center;
     background-repeat: no-repeat;
     background-size: auto;
+    
 }
+
+
+#container{
+    display: flex;
+    margin: 0.5rem;
+    padding: 1rem;
+    justify-content: space-between
+}
+
+@media (max-width: 768px) {
+    #container {
+      flex-direction: column;
+      align-items: center; 
+    }
+  }
+
+  @media (min-width: 769px) {
+    img {
+      flex: 2;}}
+  
+    .one_half {
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        text-align: center; 
+    }
+    
+    .content-with-image {
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        width: 100%;
+    }
+    
+    .text {
+        flex: 1;
+        padding: 20px;
+        display:none;
+    }
+    
+    .text p {
+        margin: 0;
+    }
+    
+    .accordion-content + image {
+        display:block;
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        display: none;
+    }
+    
+    .arrow {
+        display: inline-block;
+        color: #fff;
+        background-color: #47ea4e;
+        text-align: left;
+        padding: 10px 40px;
+        cursor: pointer;
+        vertical-align: middle;
+        text-decoration: none;
+        transition: all .2s linear;
+        margin-bottom: 17px;
+        border: 2px solid #47ea4e;
+        border-radius: 50px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        box-sizing: border-box;
+    }
+    
+    .arrow.active {
+        transform: rotate(90deg);
+    }
+    
+    .accordion-content.active {
+        max-height: 1000px;
+        display: block;
+    }
+
+    .image {
+        flex: 1; 
+        text-align: center; 
+    }
+    
+    .image img {
+        max-width: 100%;
+        height: auto;
+    }
+
 
 
 /* ===================================
@@ -2400,7 +2486,7 @@ footer .footer-social-divider:before {
         text-align: center !important;
     }
 
-    .service-holder {
+    .sobre-holder {
         text-align: center;
         max-width: 300px;
         margin-left: auto;
@@ -2542,7 +2628,7 @@ footer .footer-social-divider:before {
         margin-top: 18px;
     }
 
-    .service-holder {
+    .sobre-holder {
         margin: 0 auto;
     }
 

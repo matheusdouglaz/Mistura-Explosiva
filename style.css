@@ -825,7 +825,7 @@ h1.big-text {
 }
 
 .sobre-holder {
-    margin: 25px 0;
+    margin: 10px 0;
 }
 
 .sobre-holder:after {
@@ -834,123 +834,217 @@ h1.big-text {
     clear: both;    
 }
 
+.sobre-img {
+    width: 100%;
+}
+
 
 .sobre-txt h4 {
-    font-size: 46px;
+    font-size: 3vw;
     color: #fff;
     font-weight: 700;
     line-height: 110%;
 
 }
 
+.sobre-txt p{
+    font-size: 16px;
+    color: #fff;
+}
+
+.sobre-txt{
+    text-align: center;
+    word-wrap: break-word;
+}
 
 
-
-/* ===================================
-    5. Personagens Section CSS
-====================================== */
-
+/* Personagens Section CSS */
 #personagens {
-    box-sizing:border-box;
-    background-image: url(images/img/orange.svg);
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, #392666, #572C83, #392666);
     background-position: right center;
     background-repeat: no-repeat;
     background-size: auto;
-    
 }
 
-
-#container{
+#container {
     display: flex;
     margin: 0.5rem;
     padding: 1rem;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para a seção Dr. Amon */
+
+
+.amon-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:44px;
+    width:100%;
+    text-align:left;
+}
+
+.amon-content .content-text {
+    width: 50%;
+    padding-left: 20px;
+    margin-right:20px;
+    position: relative;
+}
+
+.amon-content .title {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.amon-content .amon {
+    text-align: justify;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5; 
+}
+
+
+.amon-content .image {
+    width: 50%;
+    position: relative;
+}
+
+/* Estilos para a seção Hebe Limpy */
+.hebe-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 35px;
+    color: #fff; 
+    width:100%;
+    text-align:right;
+    margin-bottom:0px;
+
+}
+
+.hebe-content .content-text {
+    width: 50%;
+    padding-right: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.hebe-content .title {
+    text-align: left;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hebe-content .hebe {
+    text-align: justify;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+    
+
+}
+
+.hebe-content .image {
+    width: 50%;
+    position: relative;
 }
 
 @media (max-width: 768px) {
-    #container {
-      flex-direction: column;
-      align-items: center; 
-    }
-  }
-
-  @media (min-width: 769px) {
-    img {
-      flex: 2;}}
-  
-    .one_half {
-        width: 100%;
-        display: flex;
-        flex-direction: column; 
-        justify-content: center; 
+    .hebe-content, .amon-content {
+        flex-direction: column;
         align-items: center; 
-        text-align: center; 
+        text-align: center;
     }
-    
-    .content-with-image {
-        display: flex;
-        flex-direction: row; 
-        align-items: center;
+
+    .hebe-content .content-text, .amon-content .content-text {
         width: 100%;
     }
-    
-    .text {
-        flex: 1;
-        padding: 20px;
-        display:none;
-    }
-    
-    .text p {
-        margin: 0;
-    }
-    
-    .accordion-content + image {
-        display:block;
-    }
 
-    .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-        display: none;
+    .hebe-content .image, .amon-content .image {
+        width: 100%;
+        margin-top: 20px;
     }
-    
-    .arrow {
-        display: inline-block;
-        color: #fff;
-        background-color: #47ea4e;
-        text-align: left;
-        padding: 10px 40px;
-        cursor: pointer;
-        vertical-align: middle;
-        text-decoration: none;
-        transition: all .2s linear;
-        margin-bottom: 17px;
-        border: 2px solid #47ea4e;
-        border-radius: 50px;
-        font-size: 14px;
-        letter-spacing: 2px;
-        box-sizing: border-box;
-    }
-    
-    .arrow.active {
-        transform: rotate(90deg);
-    }
-    
-    .accordion-content.active {
-        max-height: 1000px;
-        display: block;
-    }
+}
 
-    .image {
-        flex: 1; 
-        text-align: center; 
-    }
-    
-    .image img {
-        max-width: 100%;
-        height: auto;
-    }
+/* ===================================
+    6. Regras Section CSS
+====================================== */
+
+#regras {
+    display: flex;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom, #392666, #572C83, #392666);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    color: #fff;
+    justify-content: center;
+}
+
+.rule-rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.text-rules{
+    width: 100%;
+    max-width: 800px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.expandable-content {
+    display: none;
+}
+
+.expand-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    color: #fff;
+    background-color: #47ea4e;
+    text-align: left;
+    padding: 10px 40px;
+    cursor: pointer;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all .2s linear;
+    margin-bottom: 17px;
+    border: 2px solid #47ea4e;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    box-sizing: border-box;
+}
+
+.expand-button i {
+    margin-left: 5px;
+    margin-left: 0;
+}
+
+.expanded .expand-button i {
+    transform: rotate(180deg);
+}
+
+.expanded .expandable-content {
+    display: block;
+}
+
+
+
 
 
 
